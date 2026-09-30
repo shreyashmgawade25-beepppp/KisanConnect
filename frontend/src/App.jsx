@@ -6,10 +6,10 @@ import {
   Truck,
   ShieldCheck
 } from 'lucide-react';
-import Cart from "./Cart";
+import Cart from "./cart";
 import FarmerDashboard from "./FarmerDashboard";
 import Checkout from "./Checkout";
-import MyOrders from "./MyOrders";
+import MyOrders from "./Myorders";
 import FarmerOrders from "./FarmerOrders";
 
 const API_URL = 'https://kisanconnect-api-bjgv.onrender.com';
