@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+*{box-sizing:border-box}body{margin:0;font-family:'DM Sans',sans-serif;color:#17352a;background:#f8faf5}nav{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:#fff;border-bottom:1px solid #e6ece4}nav>div{display:flex;align-items:center;gap:28px}nav a{color:#365247;text-decoration:none;font-weight:600}.brand{display:flex;gap:8px;align-items:center;font-size:22px;font-weight:800;color:#153d2b}.brand svg{width:25px}.brand span{color:#5b9c43}.btn,.primary{background:#1d713e!important;color:#fff!important;padding:12px 19px;border-radius:10px}.hero{min-height:650px;padding:90px 8%;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;background:radial-gradient(circle at 85% 30%,#dfeecf 0,#f8faf5 34%)}.pill{display:inline-block;color:#4d8b3e;font-size:12px;font-weight:800;letter-spacing:1.4px;background:#eaf4e4;padding:8px 12px;border-radius:99px}.hero h1{font:700 64px/1.03 'Playfair Display';margin:22px 0;color:#153d2b}.hero h1 em{color:#57933f;font-style:normal}.hero p{font-size:18px;line-height:1.7;max-width:610px;color:#62736b}.actions{display:flex;gap:13px;margin:30px 0}.actions a{text-decoration:none;font-weight:700}.secondary{border:1px solid #cbd8cc;padding:12px 19px;border-radius:10px;color:#2e4d3d}.stats{display:flex;gap:45px;margin-top:42px}.stats div{display:flex;flex-direction:column;gap:4px}.stats b{font-size:20px}.stats small{color:#74837c}.hero-card{background:#fff;border:1px solid #e0e9de;border-radius:28px;padding:42px;box-shadow:0 20px 60px #23452d12}.orb{height:230px;border-radius:22px;background:#edf6e8;display:grid;place-items:center;font-size:100px}.hero-card h3{font:700 27px 'Playfair Display';margin:24px 0 8px}.hero-card p{font-size:15px}.route{display:flex;justify-content:space-between;margin-top:25px;padding:15px;background:#f5f8f2;border-radius:12px;font-size:14px;font-weight:700}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:70px 8%;background:#fff}.feature{padding:28px;border:1px solid #e3eae0;border-radius:18px}.feature svg{color:#559844}.feature p{color:#68776f;line-height:1.6}.page{padding:70px 8%;min-height:700px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}.section-head h2{font:700 42px 'Playfair Display';margin:12px 0 0}.section-head>span{color:#728078}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.product{background:#fff;border:1px solid #e2e9df;border-radius:18px;overflow:hidden}.product-img{height:220px;background:#eef5e9;display:grid;place-items:center;font-size:90px}.product-body{padding:22px}.product-body small{color:#718077}.product-body h3{margin:8px 0 16px}.product-body strong{font-size:20px}.product-body button{width:100%;border:0;background:#e8f2e5;color:#25653a;padding:12px;border-radius:9px;margin-top:18px;font-weight:700}.auth{min-height:700px;display:grid;place-items:center;padding:60px}.auth-card{width:min(440px,100%);background:#fff;padding:42px;border-radius:22px;border:1px solid #e0e8dd}.big{justify-content:center}.auth-card h2{text-align:center;font:700 32px 'Playfair Display'}.auth-card>p{text-align:center;color:#718078;line-height:1.5}.auth-card input{width:100%;padding:14px;margin:7px 0;border:1px solid #d8e1d7;border-radius:9px;font:inherit}.full{width:100%;border:0;margin:12px 0 20px;font:inherit;font-weight:700}.auth-card>small{display:block;text-align:center;color:#718078}.auth-card a{color:#397e42;font-weight:700}footer{text-align:center;padding:30px;background:#17352a;color:#dbe8d9;font-size:13px}@media(max-width:800px){.hero{grid-template-columns:1fr;padding:55px 6%}.hero h1{font-size:46px}.features,.grid{grid-template-columns:1fr}.section-head{display:block}.section-head>span{display:block;margin-top:10px}nav{padding:0 5%}nav>div{gap:10px}nav>div a:not(.btn){display:none}}
+/* Farmer Dashboard Form */
+
+.auth-card input,
+.auth-card textarea,
+.auth-card select,
+.page input,
+.page textarea,
+.page select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  margin: 7px 0 18px;
+  border: 1px solid #d8e2d5;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #fbfdf9;
+  color: #173b2c;
+}
+
+.page label {
+  display: block;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #173b2c;
+}
+
+.page textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.page select {
+  cursor: pointer;
+}
+
+.page form {
+  width: 100%;
+}
+
+.page form > div {
+  gap: 15px;
+}
+
+@media (max-width: 700px) {
+  .page form > div {
+    display: block !important;
+  }
+}
