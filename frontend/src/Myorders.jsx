@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API = "http://localhost:8000";
+const API = "https://kisanconnect-api-bjgv.onrender.com";
 
 export default function MyOrders() {
   const [orders, setOrders] = useState([]);

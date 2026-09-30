@@ -12,7 +12,7 @@ import Checkout from "./Checkout";
 import MyOrders from "./MyOrders";
 import FarmerOrders from "./FarmerOrders";
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://kisanconnect-api-bjgv.onrender.com';
 
 function Nav({ cartCount = 0 }) {
   return (
@@ -163,7 +163,7 @@ function Shop({ addToCart }) {
   const [error, setError] = React.useState('');
 
   React.useEffect(() => {
-    fetch('http://localhost:8000/api/products/')
+    fetch('https://kisanconnect-api-bjgv.onrender.com/api/products/')
       .then(async (response) => {
         if (!response.ok) {
           throw new Error('Failed to load products');
@@ -279,7 +279,7 @@ function Auth({ register = false }) {
       // REGISTER
       if (register) {
         const registerResponse = await fetch(
-          "http://localhost:8000/api/auth/register",
+          "https://kisanconnect-api-bjgv.onrender.com/api/auth/register",
           {
             method: "POST",
             headers: {
@@ -303,7 +303,7 @@ function Auth({ register = false }) {
 
         // Automatically login after registration
         const loginResponse = await fetch(
-          "http://localhost:8000/api/auth/login",
+          "https://kisanconnect-api-bjgv.onrender.com/api/auth/login",
           {
             method: "POST",
             headers: {
@@ -324,17 +324,22 @@ function Auth({ register = false }) {
         }
 
         localStorage.setItem("token", loginData.access_token);
-        localStorage.setItem("role", role);
 
-        window.location.href =
-          role === "farmer" ? "/farmer" : "/shop";
+        if (loginData.user?.role) {
+       localStorage.setItem("role", loginData.user.role);
+        }
+
+           setMessage("✅ Login successful!");
+
+         window.location.href =
+            loginData.user?.role === "farmer" ? "/farmer" : "/shop";
 
         return;
       }
 
       // LOGIN
       const loginResponse = await fetch(
-        "http://localhost:8000/api/auth/login",
+        "https://kisanconnect-api-bjgv.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {

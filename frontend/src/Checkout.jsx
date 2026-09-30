@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://localhost:8000";
+const API = "https://kisanconnect-api-bjgv.onrender.com";
 
 export default function Checkout({ cart, setCart }) {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API = "http://localhost:8000";
+const API = "https://kisanconnect-api-bjgv.onrender.com";
 
 export default function FarmerOrders() {
   const [orders, setOrders] = useState([]);
@@ -325,3 +325,4 @@ export default function FarmerOrders() {
     </main>
   );
 }
+
